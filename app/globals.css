@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .container-width {
+        @apply lg:w-[85%] w-[95%] mx-auto py-10
+    }
+    .gradient-btn{
+      @apply hover:!bg-gradient-to-tl !bg-gradient-to-tr !from-main-color !to-sec-bg
+    }
+    .anim{
+    animation: bounce 1.5s; 
+    animation-direction: alternate; 
+    animation-iteration-count: infinite; 
+    }
+    .anim.float1{
+        animation-duration: 2s;
+        animation-delay: 2s;
+    }
+    .anim.float2{
+        animation-duration: 1.8s;
+        animation-delay: 250ms;
+    }
+    .hero_bg{
+        background: linear-gradient(rgba(13, 25, 47, 0.8), rgba(13, 25, 47, 0.8)), url('/imgs/btc_blog.jpg');
+    }
+
+    .sidebar-scroll{
+        mask-image: linear-gradient(to top, transparent, #1e2739),
+        linear-gradient(to left, transparent 17px, #1e2739 17px);
+      mask-size: 102% 100000px;
+      mask-position: left bottom;
+      -webkit-mask-image: linear-gradient(to top, transparent, #1e2739),
+        linear-gradient(to left, transparent 17px, #1e2739 17px);
+      -webkit-mask-size: 102% 100000px;
+      -webkit-mask-position: left bottom;
+      transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+      overflow-y: scroll;
+      }
+    
+      .sidebar-scroll.chat{
+      mask-size: 101% 100000px;
+      -webkit-mask-size: 101% 100000px;
+      
+      }
+      .sidebar-scroll:hover{
+        transition: all .2s linear;
+        -webkit-mask-position: left top;
+        mask-position: left top;
+      
+      }
+      .sidebar-scroll::-webkit-scrollbar{
+        width: 8px;
+      }
+      .sidebar-scroll::-webkit-scrollbar-thumb{
+        background: #00B98E;
+        border-radius: 10px;
+      }
+      
+      .sidebar-scroll::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+}
+
+
+
+
+@keyframes bounce{ 
+    10% { transform: translate3d(0, 0, 0);}
+    100% { transform: translate3d(0, 40px, 0);}  
+} 
