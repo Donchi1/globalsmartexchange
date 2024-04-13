@@ -76,7 +76,7 @@ function pages() {
                   <TableCol value={each.profit} />
                   <TableCol value={each.fixedCharge} />
                   <TableCol value={each.expectedProfit}  />
-                  <TableCol value={moment(each.date.toDate())format('lll')} />
+                  <TableCol value={moment(each.date.toDate()).format('lll')} />
                   <TableCol value={handleStatus(each.status)} />
                   </tr>
                ))}

@@ -73,7 +73,7 @@ export default function AdminNavbar() {
     return <PreLoader />;
   }
   
-  console.log(loading)
+ 
 
   //   if(!userDocument?.verified || userDocument?.verified === "false"){
   //     router.push("/verify")
